@@ -10,6 +10,7 @@ ollama = "*"
 pypdf = "*"
 langchain-community = "*"
 python-dotenv = "*"
+timeit-decorator = "*"
 
 [dev-packages]
 
