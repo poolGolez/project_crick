@@ -9,6 +9,7 @@ langchain-pinecone = "*"
 ollama = "*"
 pypdf = "*"
 langchain-community = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

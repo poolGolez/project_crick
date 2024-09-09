@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7e81b44-0b76-45d0-92b3-c1ee6aec9d40" name="Changes" comment="Setup project">
-      <change afterPath="$PROJECT_DIR$/resources/docs/wellarchitected-framework.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ingest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" />
+    <list default="true" id="f7e81b44-0b76-45d0-92b3-c1ee6aec9d40" name="Changes" comment="Ingest documentations">
+      <change beforePath="$PROJECT_DIR$/src/ingest.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ingest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +22,7 @@
   <component name="ProjectId" id="2loNdMrkICRclCklSQe7dPRZUBw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -47,6 +43,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/resources/docs" />
     </key>
   </component>
   <component name="RunManager">
@@ -126,7 +123,39 @@
       <option name="project" value="LOCAL" />
       <updated>1725842848188</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Load documentation">
+      <option name="closed" value="true" />
+      <created>1725847135163</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725847135163</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Load documentation">
+      <option name="closed" value="true" />
+      <created>1725847275765</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725847275765</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Load documentation">
+      <option name="closed" value="true" />
+      <created>1725847303971</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725847303971</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Ingest documentations">
+      <option name="closed" value="true" />
+      <created>1725855934151</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725855934151</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,17 +171,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Setup project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup project" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/ingest.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Load documentation" />
+    <MESSAGE value="Ingest documentations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ingest documentations" />
   </component>
 </project>
