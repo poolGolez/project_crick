@@ -1,8 +1,10 @@
+from typing import List, Dict, Any
+
 from dotenv import load_dotenv
 from langchain import hub
 from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain.chains.history_aware_retriever import create_history_aware_retriever
 from langchain.chains.retrieval import create_retrieval_chain
-from langchain_community.chat_models import ChatOllama
 from langchain_community.embeddings import OllamaEmbeddings
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_pinecone import PineconeVectorStore
@@ -25,18 +27,20 @@ vector_store = PineconeVectorStore(index_name=AWSDOCS_INDEX, embedding=embedding
 
 
 @timeit(runs=1, workers=1)
-def ask(question: str):
+def ask(question: str, chat_history: List[Dict[str, Any]] = []):
     qa_prompt = hub.pull("langchain-ai/retrieval-qa-chat")
-    # qa_prompt = ChatPromptTemplate.from_messages([
-    #     ("system","You are an AWS expert. Answer questions based on the context and documentations below:\n\n<context>\n{context}\n</context>"),
-    #     ("placeholder", "{chat_history}"),
-    #     ("human", "{input}"),
-    # ])
     stuff_docs_chain = create_stuff_documents_chain(chat_llm, qa_prompt)
 
-    qa_chain = create_retrieval_chain(retriever=vector_store.as_retriever(), combine_docs_chain=stuff_docs_chain)
+    rephrase_prompt = hub.pull("langchain-ai/chat-langchain-rephrase")
+    history_aware_retriever = create_history_aware_retriever(llm=chat_llm, retriever=vector_store.as_retriever(),
+                                                             prompt=rephrase_prompt)
+    qa_chain = create_retrieval_chain(retriever=history_aware_retriever, combine_docs_chain=stuff_docs_chain)
+
     print(f"Asking AI the question... {question=}")
-    result = qa_chain.invoke({"input": question})
+    result = qa_chain.invoke({
+        "input": question,
+        "chat_history": chat_history
+    })
     print(f"Got the answer: {result=}")
 
     return result

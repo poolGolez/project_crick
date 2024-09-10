@@ -24,7 +24,7 @@ if prompt := st.chat_input("What's your question?"):
         st.write(prompt)
 
     with st.spinner("Thinking..."):
-        result = ask(prompt)
+        result = ask(prompt, st.session_state["chat_history"])
         answer = result["answer"]
         with st.chat_message("ai"):
             st.write(answer)
