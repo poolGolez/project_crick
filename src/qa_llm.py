@@ -4,6 +4,7 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains.retrieval import create_retrieval_chain
 from langchain_community.chat_models import ChatOllama
 from langchain_community.embeddings import OllamaEmbeddings
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_pinecone import PineconeVectorStore
 from timeit_decorator import timeit
 
@@ -12,7 +13,14 @@ from src.constants import EMBEDDING_MODEL_NAME, AWSDOCS_INDEX
 load_dotenv()
 
 embedding = OllamaEmbeddings(model=EMBEDDING_MODEL_NAME)
-chat_llm = ChatOllama(model="llama3", verbose=True)
+# chat_llm = ChatOllama(model="llama3", verbose=True)
+chat_llm = ChatGoogleGenerativeAI(
+    model="gemini-1.5-pro",
+    temperature=0,
+    max_tokens=None,
+    timeout=None,
+    max_retries=1
+)
 vector_store = PineconeVectorStore(index_name=AWSDOCS_INDEX, embedding=embedding)
 
 

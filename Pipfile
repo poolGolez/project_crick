@@ -12,6 +12,7 @@ langchain-community = "*"
 python-dotenv = "*"
 timeit-decorator = "*"
 streamlit = "*"
+langchain-google-genai = "*"
 
 [dev-packages]
 
