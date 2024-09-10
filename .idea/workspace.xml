@@ -4,17 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7e81b44-0b76-45d0-92b3-c1ee6aec9d40" name="Changes" comment="Ingest documentations">
-      <change afterPath="$PROJECT_DIR$/src/qa_llm.py" afterDir="false" />
+    <list default="true" id="f7e81b44-0b76-45d0-92b3-c1ee6aec9d40" name="Changes" comment="Add timer for funcciton">
+      <change afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/qa_llm.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/qa_llm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,19 +37,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Doctests in pdf.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ingest (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Python.ingest.executor&quot;: &quot;Run&quot;,
-    &quot;Python.qa_llm.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/poolgolez/projects/langchain/project_newton/project_crick/.idea/resources/docs&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Doctests in pdf.executor": "Run",
+    "Python.ingest (1).executor": "Debug",
+    "Python.ingest.executor": "Run",
+    "Python.qa_llm.executor": "Run",
+    "Python.streamlit.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/poolgolez/projects/langchain/project_newton/project_crick",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/.idea/resources/docs" />
@@ -52,7 +60,7 @@
       <recent name="$PROJECT_DIR$/resources/docs" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.qa_llm">
+  <component name="RunManager" selected="Python.streamlit">
     <configuration name="ingest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="project_crick" />
       <option name="ENV_FILES" value="" />
@@ -97,6 +105,33 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="streamlit" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="project_crick" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/.local/share/virtualenvs/project_crick-OoRCj39L/bin/streamlit" />
+      <option name="PARAMETERS" value="run src/main.py" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.streamlit" />
+      <item itemvalue="Python.ingest" />
+      <item itemvalue="Python.qa_llm" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.qa_llm" />
@@ -200,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725856098074</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add timer for funcciton">
+      <option name="closed" value="true" />
+      <created>1725920836320</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725920836320</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,6 +261,7 @@
     <MESSAGE value="Setup project" />
     <MESSAGE value="Load documentation" />
     <MESSAGE value="Ingest documentations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ingest documentations" />
+    <MESSAGE value="Add timer for funcciton" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add timer for funcciton" />
   </component>
 </project>

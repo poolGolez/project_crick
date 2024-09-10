@@ -27,8 +27,9 @@ def ask(question: str):
     stuff_docs_chain = create_stuff_documents_chain(chat_llm, qa_prompt)
 
     qa_chain = create_retrieval_chain(retriever=vector_store.as_retriever(), combine_docs_chain=stuff_docs_chain)
-    print("Asking AI the question...")
+    print(f"Asking AI the question... {question=}")
     result = qa_chain.invoke({"input": question})
+    print(f"Got the answer: {result=}")
 
     return result
 
